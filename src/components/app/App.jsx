@@ -1,15 +1,26 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "./App.scss";
 
 import Navbar from "components/navbar/Navbar";
+import { Typography } from "@material-ui/core";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
+      <Router>
         <Navbar />
-        <h2>PoGoInfo</h2>
-      </header>
+
+        <Switch>
+          <Route path="/" exact>
+            <Typography variant="h4">PoGoInfo are greate!</Typography>
+          </Route>
+          <Route path="/raids">
+            <Typography variant="h4">Raids</Typography>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 };
