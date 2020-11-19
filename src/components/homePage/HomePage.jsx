@@ -3,9 +3,9 @@ import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Grid } from "@material-ui/core";
 
-import CardLink from "components/generic/CardLink";
+import CardLink from "components/common/CardLink";
 
-import operations from "resources/operations";
+import operations from "routes";
 
 const useStyles = makeStyles({
   root: {
