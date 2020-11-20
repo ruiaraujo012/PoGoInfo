@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(7),
   },
   cards: {
+    flexGrow: 1,
     backgroundColor: "#e3f2fd",
     margin: theme.spacing(2),
   },
@@ -41,10 +42,17 @@ const RaidTier = (props) => {
         titleTypographyProps={{ variant: "h4" }}
         title={tier === "mega" ? "Mega Raid" : `Raid Tier ${tier}`}
       />
-      <Grid item container xs={12} className={classes.marginAround} spacing={3}>
+      <Grid
+        item
+        container
+        xs={12}
+        className={classes.marginAround}
+        justify="center"
+        spacing={3}
+      >
         {pokemons &&
           pokemons.map((pokemon, i) => (
-            <Grid item xs={12} sm={6} md={4} key={i}>
+            <Grid item xs={12} sm={4} key={i}>
               <PokemonCard pokemon={pokemon} key={i} />
             </Grid>
           ))}
