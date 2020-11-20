@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 
 import CardLink from "components/common/CardLink";
 
-import operations from "routes";
+import routes from "routes";
 
 const useStyles = makeStyles({
   root: {
@@ -21,9 +21,9 @@ const HomePage = () => {
     <Grid container justify="center" className={classes.root}>
       <Grid item md={2} />
       <Grid item container alignContent="center" spacing={3} xs={12} sm={8}>
-        {operations.map((op, i) => (
+        {routes.map((route, i) => (
           <Grid item xs={12} sm={6} md={4} key={i}>
-            <CardLink operation={op} />
+            <CardLink operation={route} />
           </Grid>
         ))}
       </Grid>
