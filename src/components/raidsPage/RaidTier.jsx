@@ -4,7 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Avatar, Card, CardHeader, Grid } from "@material-ui/core";
 
 import PokemonCard from "components/common/PokemonCard";
-import oneRaid from "assets/images/oneRaid.svg";
+
+import { selectRaidTierImage } from "utils/raid";
 
 const useStyles = makeStyles((theme) => ({
   marginAround: {
@@ -23,11 +24,9 @@ const useStyles = makeStyles((theme) => ({
 const RaidTier = (props) => {
   const classes = useStyles();
 
-  const { pokemons } = props;
+  const { pokemons, tier } = props;
 
   if (pokemons.length === 0) return <></>;
-
-  const tier = pokemons[0].tier;
 
   return (
     <Card className={classes.cards} variant="outlined">
@@ -35,13 +34,13 @@ const RaidTier = (props) => {
         avatar={
           <Avatar
             variant="rounded"
-            src={oneRaid}
+            src={selectRaidTierImage(tier)}
             className={classes.avatarLarge}
           />
         }
         titleTypographyProps={{ variant: "h4" }}
-        title={`Raid Level ${tier}`}
-      ></CardHeader>
+        title={tier === "mega" ? "Mega Raid" : `Raid Tier ${tier}`}
+      />
       <Grid item container xs={12} className={classes.marginAround} spacing={3}>
         {pokemons &&
           pokemons.map((pokemon, i) => (
@@ -56,6 +55,7 @@ const RaidTier = (props) => {
 
 RaidTier.propTypes = {
   pokemons: PropTypes.array,
+  tier: PropTypes.string,
 };
 
 export default RaidTier;

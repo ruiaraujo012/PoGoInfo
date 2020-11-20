@@ -35,8 +35,8 @@ const RaidsPage = () => {
       <Grid item md={2} />
       <Grid item container alignContent="center" xs={12} sm={8} spacing={3}>
         {!loadingCurrentRaids &&
-          Object.keys(currentRaids).map((pokemonByTier, i) => (
-            <RaidTier pokemons={currentRaids[pokemonByTier]} key={i} />
+          Object.keys(currentRaids).map((tier, i) => (
+            <RaidTier pokemons={currentRaids[tier]} tier={tier} key={i} />
           ))}
       </Grid>
       <Grid item md={2} />
