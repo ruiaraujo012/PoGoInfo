@@ -6,8 +6,7 @@ import "./App.scss";
 import Navbar from "components/navbar/Navbar";
 import HomePage from "components/homePage/HomePage";
 import NotFound from "components/notFound/NotFound";
-
-import { Typography } from "@material-ui/core";
+import RaidsPage from "components/raidsPage/RaidsPage";
 
 const App = () => {
   return (
@@ -16,9 +15,7 @@ const App = () => {
 
       <Switch>
         <Route path="/" exact component={HomePage} />
-        <Route path="/raids">
-          <Typography variant="h4">Raids</Typography>
-        </Route>
+        <Route path="/raids" component={RaidsPage} />
         <Route path="/pageNotFound" component={NotFound} />
         <Redirect to="/pageNotFound" />
       </Switch>

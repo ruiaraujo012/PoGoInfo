@@ -68,3 +68,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Structure
+
+```
+.
+├── README.md
+├── package.json
+├── jsconfig.json
+├── public/
+└── src/
+    ├── index.jsx
+    ├── routes.js
+    ├── api/
+    ├── assets/
+    ├── config/
+    ├── containers/
+    ├── context/
+    ├── types/
+    ├── utils/
+    └── components/
+        └── common/
+```
+
+- src/ - Contains all of our react codebase.
+- index.jsx - Base react component. If you are not using typescript just change this to 'index.js' or 'index.jsx'.
+- routes.js - App navigation. If you are not using typescript just change this to 'routes.js'.
+- api/ - Api call related functions.
+- assets/ - Images, fonts and other static files.
+- config/ - Config files
+- containers/ - Smart Components
+- context/ - React context
+- types/ - Typescript related files or functions.
+- utils/ - Helper functions
+- components/ - Dumb Components
+- components/common/ - Shared components
+
+More info [here](https://dev.to/pcofilada/simple-react-folder-structure-31lj).

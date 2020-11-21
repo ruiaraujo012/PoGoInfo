@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Grid } from "@material-ui/core";
-import NotFoundImage from "resources/images/404image.jpg";
+import NotFoundImage from "assets/images/404image.jpg";
 
 import { makeStyles } from "@material-ui/styles";
 

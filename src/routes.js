@@ -1,8 +1,10 @@
+import raidImage from "assets/images/raidImage.svg";
+
 export default [
   {
     title: "Raids",
     description: "Find the current raid bosses.",
-    image: "https://www.flaticon.com/svg/static/icons/svg/189/189012.svg",
+    image: raidImage,
     path: "/raids",
   },
   {
