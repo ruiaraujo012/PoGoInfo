@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import pogoapi from "api/pogoapi";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 import RaidTier from "components/raidsPage/RaidTier";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "10px",
+    flexGrow: 1,
+    marginTop: theme.spacing(1),
   },
-});
+}));
 
 const RaidsPage = () => {
   const classes = useStyles();
