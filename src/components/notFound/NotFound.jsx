@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Grid } from "@material-ui/core";
 import NotFoundImage from "assets/images/404image.jpg";
 
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   mainContent: {

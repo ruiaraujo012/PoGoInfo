@@ -1,12 +1,7 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  AppBar,
-  Toolbar,
-  // Button,
-  Typography,
-} from "@material-ui/core/";
+import { AppBar, Toolbar, Button, Typography } from "@material-ui/core/";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -38,9 +33,9 @@ const Navbar = () => {
               PoGoInfo
             </a>
           </Typography>
-          {/* <Button href="/raids" color="inherit" className={classes.buttonLink}>
-            Raids
-          </Button> */}
+          <Button href="/about" color="inherit" className={classes.buttonLink}>
+            About Us
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
