@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Redirect,
-  Route,
-  Switch,
-} from "react-router-dom";
+import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 
 import "./App.scss";
 
@@ -17,7 +12,7 @@ import AboutUs from "components/aboutUs/AboutUs";
 const App = () => {
   return (
     <div className="App">
-      <Router>
+      <HashRouter basename="/">
         <Navbar />
 
         <Switch>
@@ -27,7 +22,7 @@ const App = () => {
           <Route path="/pageNotFound" component={NotFound} />
           <Redirect to="/pageNotFound" />
         </Switch>
-      </Router>
+      </HashRouter>
     </div>
   );
 };
