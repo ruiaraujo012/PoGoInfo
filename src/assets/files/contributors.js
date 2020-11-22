@@ -7,6 +7,12 @@ export default [
     url: "https://pogoapi.net/",
   },
   {
+    name: "serebii",
+    description: "Pokemon assets.",
+    image: "https://www.serebii.net/anime/pokemon/251.gif",
+    url: "https://www.serebii.net/",
+  },
+  {
     name: "Freepik",
     description: "App icon and icons on website.",
     image: "https://img-authors.flaticon.com/freepik.jpg",

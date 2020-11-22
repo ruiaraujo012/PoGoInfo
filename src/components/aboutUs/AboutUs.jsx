@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Divider, Grid, Paper, Typography } from "@material-ui/core";
 import ContributorCard from "components/aboutUs/ContributorCard";
 import contributors from "assets/files/contributors";
 
@@ -29,13 +29,16 @@ const AboutUs = () => {
         <Paper variant="outlined" className={classes.paper}>
           <Grid item>
             <Typography variant="h4">PoGoInfo</Typography>
-            <Typography variant="body1">Description</Typography>
+            <Typography variant="body1">
+              PoGoInfo is an website, not afiliated to any{" "}
+            </Typography>
           </Grid>
           <Grid item>
             <Paper variant="outlined" className={classes.subPaper}>
               <Typography variant="h6">
                 The different icons, sprites, wallpapers and information used in
-                the website are taken from different free sources, listed below:
+                this website are taken from different free sources, listed
+                below:
               </Typography>
             </Paper>
           </Grid>
@@ -46,11 +49,37 @@ const AboutUs = () => {
               </Grid>
             ))}
           </Grid>
+          <Grid item>
+            <Divider variant="middle" />
+            <Paper variant="outlined" className={classes.subPaper}>
+              <Typography variant="inherit">
+                ©2020 PoGoInfo | All Rights Reserved
+                {/* | @TheSilphRoad | /r/TheSilphRoad */}
+              </Typography>
+            </Paper>
+          </Grid>
+          <Grid item>
+            <Paper variant="outlined" className={classes.subPaper}>
+              <Typography variant="caption">
+                Pokémon is Copyright Gamefreak, Nintendo and The Pokémon Company
+                2001-2018. All images and names owned and trademarked by
+                Gamefreak, Nintendo, The Pokémon Company, and Niantic are
+                property of their respective owners.
+              </Typography>
+            </Paper>
+          </Grid>
+          <Grid item>
+            <Paper variant="outlined" className={classes.subPaper}>
+              <Typography variant="caption">
+                The PoGoInfo is not affiliated with Niantic Inc., The Pokemon
+                Company, or Nintendo.
+              </Typography>
+            </Paper>
+          </Grid>
         </Paper>
       </Grid>
       <Grid item lg={2} />
     </Grid>
   );
 };
-
 export default AboutUs;
