@@ -1,5 +1,10 @@
 import React from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 
 import "./App.scss";
 
@@ -12,15 +17,17 @@ import AboutUs from "components/aboutUs/AboutUs";
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
+      <Router>
+        <Navbar />
 
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/raids" component={RaidsPage} />
-        <Route path="/about" component={AboutUs} />
-        <Route path="/pageNotFound" component={NotFound} />
-        <Redirect to="/pageNotFound" />
-      </Switch>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/raids" component={RaidsPage} />
+          <Route path="/about" component={AboutUs} />
+          <Route path="/pageNotFound" component={NotFound} />
+          <Redirect to="/pageNotFound" />
+        </Switch>
+      </Router>
     </div>
   );
 };
