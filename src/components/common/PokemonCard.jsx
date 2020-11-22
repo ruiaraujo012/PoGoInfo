@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(0.5),
   },
   card: {
+    borderRadius: 15,
     background: "linear-gradient(to bottom, #83a4d4, #b6fbff)",
   },
 }));

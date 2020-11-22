@@ -52,7 +52,7 @@ const RaidTier = (props) => {
       >
         {pokemons &&
           pokemons.map((pokemon, i) => (
-            <Grid item xs={12} sm={4} key={i}>
+            <Grid item xs={12} sm={6} md={3} lg={4} key={i}>
               <PokemonCard pokemon={pokemon} key={i} />
             </Grid>
           ))}

@@ -13,8 +13,10 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   card: {
+    display: "grid",
+    borderRadius: 15,
     minHeight: 250,
-    background: "linear-gradient(0deg, #e3e3e3 0%,#e3e3e3 55%, #828a93 100%)",
+    background: "linear-gradient(to bottom, #83a4d4, #b6fbff)",
     paddingTop: theme.spacing(2),
     margin: theme.spacing(2),
   },
@@ -29,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardActions: {
     display: "flex",
-    flexDirection: "column",
     justifyContent: "space-between",
   },
 }));
@@ -46,21 +47,22 @@ const PokemonCard = (props) => {
       </Container>
       <CardContent>
         <Typography variant="h6">{contributor.name}</Typography>
-        <Typography variant="caption">{contributor.description}</Typography>
+        <Typography variant="body2">{contributor.description}</Typography>
       </CardContent>
-      <CardActions className={classes.cardActions}>
-        <Container>
+      {contributor.url && (
+        <CardActions className={classes.cardActions}>
           <Button
             size="small"
             variant="outlined"
             color="primary"
             href={contributor.url}
-            disabled={!contributor.url}
+            fullWidth
+            target="_blank"
           >
             Visit
           </Button>
-        </Container>
-      </CardActions>
+        </CardActions>
+      )}
     </Card>
   );
 };

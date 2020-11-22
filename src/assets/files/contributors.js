@@ -1,5 +1,12 @@
 export default [
   {
+    name: "PoGoAPI",
+    description: "Data from raids.",
+    image:
+      "https://pbs.twimg.com/profile_images/1298675700455669769/qHeUwBP9_400x400.jpg",
+    url: "https://pogoapi.net/",
+  },
+  {
     name: "Freepik",
     description: "App icon and icons on website.",
     image: "https://img-authors.flaticon.com/freepik.jpg",

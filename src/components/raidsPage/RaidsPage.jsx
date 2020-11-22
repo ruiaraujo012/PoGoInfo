@@ -33,14 +33,14 @@ const RaidsPage = () => {
 
   return (
     <Grid container justify="center" className={classes.root}>
-      <Grid item md={2} />
-      <Grid item container alignContent="center" xs={12} sm={8} spacing={3}>
+      <Grid item lg={2} />
+      <Grid item container alignContent="center" xs={12} lg={8} spacing={3}>
         {!loadingCurrentRaids &&
           Object.keys(currentRaids).map((tier, i) => (
             <RaidTier pokemons={currentRaids[tier]} tier={tier} key={i} />
           ))}
       </Grid>
-      <Grid item md={2} />
+      <Grid item lg={2} />
     </Grid>
   );
 };
