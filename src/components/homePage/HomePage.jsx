@@ -20,7 +20,15 @@ const HomePage = () => {
   return (
     <Grid container justify="center" className={classes.root}>
       <Grid item md={2} />
-      <Grid item container alignContent="center" spacing={3} xs={12} sm={8}>
+      <Grid
+        item
+        container
+        alignContent="center"
+        justify="center"
+        spacing={3}
+        xs={12}
+        sm={8}
+      >
         {routes.map((route, i) => (
           <Grid item xs={12} sm={6} md={4} key={i}>
             <CardLink operation={route} />

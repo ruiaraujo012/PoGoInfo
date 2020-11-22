@@ -24,8 +24,8 @@ const AboutUs = () => {
 
   return (
     <Grid container justify="center" className={classes.root}>
-      <Grid item md={2} />
-      <Grid item container direction="column" xs={12} sm={8}>
+      <Grid item lg={2} />
+      <Grid item container direction="column" xs={12} lg={8}>
         <Paper variant="outlined" className={classes.paper}>
           <Grid item>
             <Typography variant="h4">PoGoInfo</Typography>
@@ -48,7 +48,7 @@ const AboutUs = () => {
           </Grid>
         </Paper>
       </Grid>
-      <Grid item md={2} />
+      <Grid item lg={2} />
     </Grid>
   );
 };

@@ -7,6 +7,7 @@ import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
   root: {
+    borderRadius: 15,
     display: "flex",
   },
   details: {
@@ -31,7 +32,7 @@ const CardLink = (props) => {
 
   return (
     <Link to={operation.path} className={classes.noUnderline}>
-      <Card className={classes.root} elevation={4}>
+      <Card className={classes.root} elevation={3}>
         <CardMedia
           className={classes.cover}
           image={operation.image}
