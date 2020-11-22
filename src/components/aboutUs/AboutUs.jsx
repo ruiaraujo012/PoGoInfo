@@ -28,10 +28,15 @@ const AboutUs = () => {
       <Grid item container direction="column" xs={12} lg={8}>
         <Paper variant="outlined" className={classes.paper}>
           <Grid item>
-            <Typography variant="h4">PoGoInfo</Typography>
-            <Typography variant="body1">
-              PoGoInfo is an website, not afiliated to any{" "}
-            </Typography>
+            <Paper variant="outlined" className={classes.subPaper}>
+              <Typography variant="h4">PoGoInfo</Typography>
+              <Paper variant="outlined" className={classes.subPaper}>
+                <Typography variant="body1">
+                  PoGoInfo is a website made to help Pokemon Go players around
+                  the world in their adventure.
+                </Typography>
+              </Paper>
+            </Paper>
           </Grid>
           <Grid item>
             <Paper variant="outlined" className={classes.subPaper}>
@@ -53,7 +58,7 @@ const AboutUs = () => {
             <Divider variant="middle" />
             <Paper variant="outlined" className={classes.subPaper}>
               <Typography variant="inherit">
-                ©2020 PoGoInfo | All Rights Reserved
+                ©2020 PoGoInfo | All rights reserved by their respective owners.
                 {/* | @TheSilphRoad | /r/TheSilphRoad */}
               </Typography>
             </Paper>
@@ -61,18 +66,23 @@ const AboutUs = () => {
           <Grid item>
             <Paper variant="outlined" className={classes.subPaper}>
               <Typography variant="caption">
-                Pokémon is Copyright Gamefreak, Nintendo and The Pokémon Company
-                2001-2018. All images and names owned and trademarked by
-                Gamefreak, Nintendo, The Pokémon Company, and Niantic are
-                property of their respective owners.
+                Pokémon and its trademarks are ©1995-2020 Nintendo, Creatures,
+                and GAMEFREAK.
+              </Typography>
+              <br />
+              <Typography variant="caption">
+                All images and names owned and trademarked by Nintendo, Niantic,
+                The Pokémon Company, and GAMEFREAK are property of their
+                respective owners.
               </Typography>
             </Paper>
           </Grid>
           <Grid item>
             <Paper variant="outlined" className={classes.subPaper}>
               <Typography variant="caption">
-                The PoGoInfo is not affiliated with Niantic Inc., The Pokemon
-                Company, or Nintendo.
+                The PoGoInfo website is not officially affiliated with Pokémon
+                GO and is intended to fall under Fair Use doctrine, similar to
+                any other informational site such as a wiki.
               </Typography>
             </Paper>
           </Grid>
