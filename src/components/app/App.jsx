@@ -12,7 +12,7 @@ import AboutUs from "components/aboutUs/AboutUs";
 const App = () => {
   return (
     <div className="App">
-      <HashRouter basename="/">
+      <HashRouter>
         <Navbar />
 
         <Switch>
