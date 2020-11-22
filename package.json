@@ -2,6 +2,7 @@
   "name": "PoGoInfo",
   "version": "0.4.0",
   "private": true,
+  "homepage": "https://ruiaraujo012.github.io/PoGoInfo",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
