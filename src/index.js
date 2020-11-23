@@ -4,11 +4,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.scss";
 import "fontsource-roboto";
 import App from "components/app/App";
+import history from "history";
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router history={history}>
       <App />
     </Router>
   </React.StrictMode>,
