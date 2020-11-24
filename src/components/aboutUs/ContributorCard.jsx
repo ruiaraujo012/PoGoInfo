@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  button: {
+    borderRadius: 15,
+  },
 }));
 
 const PokemonCard = (props) => {
@@ -58,6 +61,7 @@ const PokemonCard = (props) => {
             href={contributor.url}
             fullWidth
             target="_blank"
+            className={classes.button}
           >
             Visit
           </Button>

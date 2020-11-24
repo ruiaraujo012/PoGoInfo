@@ -24,9 +24,10 @@ const RaidsPage = () => {
 
   const fetchRaidsData = async () => {
     try {
-      const { data } = await pogoapi.get("/api/v1/raid_bosses.json");
+      const { data } = await pogoapi.get("/raid_bosses.json");
       setCurrentRaids(data.current);
     } catch (err) {
+      // TODO: Add toast notification
       console.log("err :>> ", err);
     }
   };
@@ -34,7 +35,7 @@ const RaidsPage = () => {
   return (
     <Grid container justify="center" className={classes.root}>
       <Grid item lg={2} />
-      <Grid item container alignContent="center" xs={12} lg={8} spacing={3}>
+      <Grid item container alignItems="center" xs={12} lg={8} spacing={3}>
         {!loadingCurrentRaids &&
           Object.keys(currentRaids).map((tier, i) => (
             <RaidTier pokemons={currentRaids[tier]} tier={tier} key={i} />

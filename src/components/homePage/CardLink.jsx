@@ -9,6 +9,7 @@ const useStyles = makeStyles(() => ({
   root: {
     borderRadius: 15,
     display: "flex",
+    height: 120,
   },
   details: {
     display: "flex",
@@ -18,7 +19,8 @@ const useStyles = makeStyles(() => ({
     flex: "1 0 auto",
   },
   cover: {
-    width: "50%",
+    width: 150,
+    // width: "50%",
   },
   noUnderline: {
     textDecoration: "none",
