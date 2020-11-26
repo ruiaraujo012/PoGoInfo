@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { Router } from "react-router-dom";
 import "./index.scss";
 import "fontsource-roboto";
 import App from "components/app/App";
-import history from "history";
+import history from "./history";
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

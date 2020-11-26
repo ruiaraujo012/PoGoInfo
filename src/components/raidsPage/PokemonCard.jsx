@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(4),
   },
   paper: {
+    borderRadius: 15,
     padding: theme.spacing(0.5),
   },
   chip: {

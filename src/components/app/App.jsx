@@ -8,6 +8,7 @@ import HomePage from "components/homePage/HomePage";
 import NotFound from "components/notFound/NotFound";
 import RaidsPage from "components/raidsPage/RaidsPage";
 import AboutUs from "components/aboutUs/AboutUs";
+import ShinyDex from "components/shinyDex/ShinyDex";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" exact component={HomePage} />
         <Route path="/raids" component={RaidsPage} />
         <Route path="/about" component={AboutUs} />
+        <Route path="/shiny-dex" component={ShinyDex} />
         <Route path="/pageNotFound" component={NotFound} />
         <Redirect to="/pageNotFound" />
       </Switch>

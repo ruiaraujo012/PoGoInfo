@@ -3,7 +3,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid } from "@material-ui/core";
 
-import CardLink from "components/common/CardLink";
+import CardLink from "components/homePage/CardLink";
 
 import routes from "routes";
 

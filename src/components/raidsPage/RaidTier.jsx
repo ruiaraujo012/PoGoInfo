@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import { Avatar, Card, CardHeader, Grid } from "@material-ui/core";
 
-import PokemonCard from "components/common/PokemonCard";
+import PokemonCard from "components/raidsPage/PokemonCard";
 
 import { selectRaidTierImage } from "utils/raid";
 
@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(7),
   },
   cards: {
+    borderRadius: 15,
     flexGrow: 1,
     backgroundColor: "#e3f2fd",
     margin: theme.spacing(2),

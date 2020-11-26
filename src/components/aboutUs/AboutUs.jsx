@@ -9,11 +9,13 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
+    borderRadius: 15,
     textAlign: "center",
     background: "linear-gradient(to bottom, #e0eafc, #cfdef3)",
     margin: theme.spacing(2),
   },
   subPaper: {
+    borderRadius: 15,
     padding: theme.spacing(1),
     margin: theme.spacing(2),
   },
