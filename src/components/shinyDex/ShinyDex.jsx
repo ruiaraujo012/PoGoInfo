@@ -4,7 +4,7 @@ import { Grid, IconButton, Paper, TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import PokemonCard from "components/shinyDex/PokemonCard";
 import { Alert, Pagination } from "@material-ui/lab";
-import { Search } from "@material-ui/icons";
+import { Clear, Search } from "@material-ui/icons";
 import Fuse from "fuse.js";
 
 const useStyles = makeStyles((theme) => ({
@@ -72,6 +72,7 @@ const ShinyDex = () => {
   const handleClickClear = () => {
     setSearchInput("");
     setParsedShinyDex(shinyDex);
+    setTotalPages(Math.ceil(shinyDex.length / POKEMONS_PER_PAGE));
   };
 
   const handleChangeSearchInput = (event) => {
@@ -116,6 +117,13 @@ const ShinyDex = () => {
     setLoading(false);
   }, []);
 
+  // Auto search
+  useEffect(() => {
+    if (searchInput === "") return handleSearch();
+    const timeoutId = setTimeout(() => handleSearch(), 350);
+    return () => clearTimeout(timeoutId);
+  }, [searchInput]);
+
   /**
    * Search Input
    */
@@ -126,6 +134,7 @@ const ShinyDex = () => {
 
   /**
    * Calculate pagination
+   * Should this be a state???
    */
   const indexOfLastPokemon = currentPage * POKEMONS_PER_PAGE;
   const indexOfFirstPokemon = indexOfLastPokemon - POKEMONS_PER_PAGE;
@@ -160,13 +169,13 @@ const ShinyDex = () => {
               InputProps={{
                 endAdornment: (
                   <>
-                    {/* <IconButton
+                    <IconButton
                       edge="end"
                       onClick={handleClickClear}
                       className={classes.icons}
                     >
                       <Clear />
-                    </IconButton> */}
+                    </IconButton>
 
                     <IconButton
                       color="primary"
