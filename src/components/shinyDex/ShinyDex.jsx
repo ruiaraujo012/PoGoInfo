@@ -135,6 +135,7 @@ const ShinyDex = () => {
   /**
    * Calculate pagination
    * Should this be a state???
+   * And moved to useEffects (componentDidUpdate)
    */
   const indexOfLastPokemon = currentPage * POKEMONS_PER_PAGE;
   const indexOfFirstPokemon = indexOfLastPokemon - POKEMONS_PER_PAGE;
